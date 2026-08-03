@@ -1,0 +1,7 @@
+{
+  "name": "summarize-scores-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"test": "jest --runInBand"},
+  "devDependencies": {"jest": "^30.0.0"}
+}

@@ -1,0 +1,6 @@
+{
+  "input": [
+    {"event_id": "job-1", "entity_id": "job", "state": "queued", "timestamp": 10},
+    {"event_id": "job-2", "entity_id": "job", "state": "succeeded", "timestamp": 20}
+  ]
+}

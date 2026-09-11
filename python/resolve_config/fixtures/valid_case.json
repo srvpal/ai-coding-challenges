@@ -1,0 +1,7 @@
+{
+  "base": {"endpoint": "primary", "retries": 2, "trace": false},
+  "environment": {"retries": 3, "trace": null},
+  "overrides": {"timeout": 10},
+  "protected_keys": ["endpoint"],
+  "expected": {"endpoint": "primary", "retries": 3, "timeout": 10}
+}

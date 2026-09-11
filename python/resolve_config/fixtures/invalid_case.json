@@ -1,0 +1,6 @@
+{
+  "base": {"endpoint": "primary"},
+  "environment": {},
+  "overrides": {"endpoint": null},
+  "protected_keys": ["endpoint"]
+}

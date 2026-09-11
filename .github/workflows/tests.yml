@@ -11,7 +11,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: pytest
+      - run: python -m pytest python/normalize_events/test_solution.py
+      - run: python -m pytest python/resolve_config/test_solution.py python/resolve_config/test_baseline.py
+      - run: python -m pytest python/validate_event_sequence/test_solution.py
+      - run: python -m pytest tests
+      - run: python tools/validate_manifests.py
   javascript:
     runs-on: ubuntu-latest
     defaults:
@@ -24,5 +28,21 @@ jobs:
           node-version: "22"
           cache: npm
           cache-dependency-path: javascript/summarize_scores/package-lock.json
-      - run: npm install
+      - run: npm ci
       - run: npm test
+  evaluation-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: javascript/summarize_scores/package-lock.json
+      - run: pip install -r requirements.txt
+      - run: npm ci
+        working-directory: javascript/summarize_scores
+      - run: python tools/evaluate.py

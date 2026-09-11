@@ -1,0 +1,10 @@
+{
+  "input": [
+    {"id": 7, "label": " useful ", "score": 1},
+    {"id": "3", "label": "incorrect", "score": 0.25}
+  ],
+  "expected": [
+    {"id": "3", "label": "incorrect", "score": 0.25},
+    {"id": "7", "label": "useful", "score": 1.0}
+  ]
+}

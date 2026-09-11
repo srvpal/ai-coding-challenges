@@ -1,0 +1,6 @@
+{
+  "cases": [
+    {"name": "blank category", "input": [{"category": "   ", "score": 2}]},
+    {"name": "score above range", "input": [{"category": "accuracy", "score": 6}]}
+  ]
+}

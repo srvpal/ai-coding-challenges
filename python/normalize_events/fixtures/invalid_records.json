@@ -1,0 +1,6 @@
+{
+  "cases": [
+    {"name": "missing label", "input": [{"id": 1, "score": 0.5}]},
+    {"name": "negative score", "input": [{"id": 1, "label": "valid", "score": -0.1}]}
+  ]
+}

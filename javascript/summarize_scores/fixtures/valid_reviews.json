@@ -1,0 +1,11 @@
+{
+  "input": [
+    {"category": " accuracy ", "score": 4},
+    {"category": "accuracy", "score": 5},
+    {"category": "safety", "score": 3}
+  ],
+  "expected": {
+    "accuracy": {"count": 2, "average": 4.5},
+    "safety": {"count": 1, "average": 3}
+  }
+}
